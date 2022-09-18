@@ -23,6 +23,6 @@ onHttpServer=()=>{
     console.log(`server is running on ${HTTP_PORT}`);
 }
 
-app.use(express.static('public'));
+app.use(express.static('style'));
 
 app.listen(HTTP_PORT,onHttpServer());
