@@ -4,11 +4,12 @@
 }
 #bg{
     margin-top:10px;
-    background-color: black;
+    background-image: url("../images/bg.png");
     width:800px;
     height:500px;
     margin-left:auto;
     margin-right:auto;
+    
 }
 
 #box{
@@ -39,8 +40,50 @@
 }
 
 .heart{
+    margin-left: 10px;
     width:60px;
     height: 60px;
     margin-top:20px;
     background-color: #8E7964;
+}
+.time{
+    display: inline;
+    background-color: #8E7964;
+    font-size: 70px;
+    margin-left: 20px;
+    color: white;
+}
+
+#title{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+#desc,#game-start{
+    background-color: #8E7964;
+    border-color:  #8E7964;
+    color: white;
+    border:0px;
+    padding:10px;
+    width: 250px;
+    height: 50px;
+    font-size:large;
+    border-radius: 5px;
+}
+#buttons{
+text-align: center;
+}
+
+#playdesc{
+    width: 800px;
+    height: 500px;
+    background-color: #8E7964;
+    margin-left:auto;
+    margin-right:auto;
+}
+#playdesc>h1{
+  display: inline;
+  color: white;
+  background-color: #8E7964;
 }
