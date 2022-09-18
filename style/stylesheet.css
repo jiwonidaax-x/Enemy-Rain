@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    background-color: #4E6349;
+}
+#bg{
+margin-top:10px;
+background-color: black;
+width:800px;
+height:500px;
+margin-left:auto;
+margin-right:auto;
+}
+
+#box{
+    background-color: #8E7964;
+    width:800px;
+    height:100px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    border-radius: 5px;
+}
+#icon{
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    justify-content: space-between;
+}
+#arrow{
+    width:60px;
+    height: 60px;
+    cursor: pointer;
+}
+#start{
+    width:60px;
+    height: 60px;
+    cursor: pointer;
+}
