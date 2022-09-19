@@ -43,7 +43,7 @@ body{
 }
 
 .heart {
-  margin-left: 10px;
+  margin-left: 15px;
   width: 60px;
   height: 60px;
   margin-top: 20px;
@@ -53,7 +53,7 @@ body{
   display: inline;
   background-color: #8e7964;
   font-size: 70px;
-  margin-left: 20px;
+  margin-left: 30px;
   color: white;
 }
 
@@ -109,4 +109,23 @@ background-position: -70px 0px;
 }
 #bg >.stop {
 background-position: 0px 0px;
+}
+
+#ghost-bar{
+  width:45px;
+  height:50px;
+  background-image:url("../images/ghost.png");
+  background-repeat:no-repeat;
+  background-position: 0px 0px;
+  display:inline-block;
+  margin-left:30px;
+}
+
+.score {
+  display: inline;
+  background-color: #8e7964;
+  font-size: 70px;
+  margin-left: 10px;
+  color: white;
+ 
 }
