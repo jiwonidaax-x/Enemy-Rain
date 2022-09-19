@@ -2,6 +2,7 @@ var express = require("express");
 var app= express();
 var HTTP_PORT = process.env.PORT || 8080;
 var path = require("path");
+app.use(express.static('public'));
 
 app.get('/',(req,res)=>{
 res.sendFile(path.join(__dirname,"/views/index.html"));
@@ -22,7 +23,5 @@ app.use((req,res)=>{
 onHttpServer=()=>{
     console.log(`server is running on ${HTTP_PORT}`);
 }
-
-app.use(express.static('style'));
 
 app.listen(HTTP_PORT,onHttpServer());

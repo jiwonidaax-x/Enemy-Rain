@@ -70,6 +70,7 @@
     height: 50px;
     font-size:large;
     border-radius: 5px;
+    cursor: pointer;
 }
 #buttons{
 text-align: center;
@@ -81,6 +82,7 @@ text-align: center;
     background-color: #8E7964;
     margin-left:auto;
     margin-right:auto;
+
 }
 #playdesc>h1{
   display: inline;
