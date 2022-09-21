@@ -10,11 +10,11 @@ document.addEventListener('keydown', function(e) {
     }
   }
   var leftval = Number(num);
-  if (e.keyCode === 37) {
+  if (e.keyCode === 37 && leftval > 0) {
     heroElement.className = 'left';
     heroElement.style.left = leftval - 1 + 'px';
   }
-  else if (e.keyCode === 39) {
+  else if (e.keyCode === 39 && leftval < 765) {
     heroElement.className = 'right';
     heroElement.style.left = leftval + 1 + 'px';
   }
