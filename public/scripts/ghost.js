@@ -22,7 +22,7 @@ addghost = () => {
     ghostdiv.style.top = topnum + randomRange(1, 10) + "px";
 
     if (topnum > BG_HEIGHT - GHOST_HEIGHT) {
-      ghostdiv.remove();
+      //ghostdiv.remove();
       clearInterval(interval);
     }
   }, 100);
