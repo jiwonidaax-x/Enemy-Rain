@@ -25,7 +25,7 @@ addghost = () => {
       //ghostdiv.remove();
       clearInterval(interval);
     }
-  }, 100);
+  }, 300);
 };
 
 addghost();
