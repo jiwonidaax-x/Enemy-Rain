@@ -101,7 +101,7 @@ body{
   background-repeat: no-repeat;
   bottom:0;
   position:absolute;
-  left:400px;
+  left:50%;
 }
 
 #bg >.right {
