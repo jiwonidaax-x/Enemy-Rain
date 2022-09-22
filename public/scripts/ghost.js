@@ -1,3 +1,5 @@
+var score = 0;
+var total = 0;
 randomRange = (min, max) => {
   return Math.floor(Math.random() * (max + 1 - min)) + min;
 };
@@ -17,6 +19,15 @@ addghost = () => {
 
   bgelement.appendChild(ghostdiv);
 
+  //토달 수 계속 더해주기
+  total++;
+  var text = scoreElement.innerText;
+  let nums = text.split("/");
+  nums[1] = total;
+  console.log(nums);
+
+  scoreElement.innerHTML = score + "/" + total;
+
   let interval = setInterval(() => {
     let gtopnum = strToNum(ghostdiv.style.top);
     let gleftnum = strToNum(ghostdiv.style.left);
@@ -26,6 +37,8 @@ addghost = () => {
 
     if (gtopnum > BG_HEIGHT - (GHOST_HEIGHT + HERO_WIDTH)) {
       if (gleftnum < heroleftnum && heroleftnum < gleftnum + GHOST_WIDTH) {
+        score++;
+        scoreElement.innerHTML = score + "/" + total;
         killed(ghostdiv);
         clearInterval(interval);
       }
@@ -43,4 +56,3 @@ killed = (ghost) => {
     ghost.remove();
   }, 3000);
 };
-
