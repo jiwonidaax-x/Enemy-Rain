@@ -1,6 +1,6 @@
 const heroElement = document.getElementById('hero');
 
-strToNum=(str)=>{
+strToNum = (str) => {
   var num = "";
   for (let i = 0; i < str.length; i++) {
     if (isNaN(Number(str[i])) == false) {
@@ -11,10 +11,12 @@ strToNum=(str)=>{
   return leftval;
 }
 document.addEventListener('keydown', function(e) {
+  //
   const left = getComputedStyle(heroElement).left;
   var leftval = strToNum(left);
   if (e.keyCode === 37 && leftval > 0) {
     heroElement.className = 'left';
+    //
     heroElement.style.left = leftval - 5 + 'px';
   }
   else if (e.keyCode === 39 && leftval < 765) {
