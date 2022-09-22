@@ -17,18 +17,17 @@ addghost = () => {
   bgelement.appendChild(ghostdiv);
 
   let interval = setInterval(() => {
-    let ghostTop = ghostdiv.style.top;
-    let topnum = strToNum(ghostTop);
-    ghostdiv.style.top = topnum + randomRange(1, 10) + "px";
+  let gtopnum = strToNum(ghostdiv.style.top);
+  let gleftnum= strToNum(ghostdiv.style.left);
 
-    if (topnum > BG_HEIGHT - GHOST_HEIGHT) {
+    ghostdiv.style.top = gtopnum + randomRange(1, 15) + "px";
+
+    if (gtopnum > BG_HEIGHT - GHOST_HEIGHT) {
       //ghostdiv.remove();
       clearInterval(interval);
     }
-  }, 300);
+  }, 200);
 };
 
 addghost();
-addghost();
-addghost();
-addghost();
+setInterval(addghost,3500);
