@@ -22,7 +22,7 @@ addghost = () => {
     let gleftnum = strToNum(ghostdiv.style.left);
     let heroleftnum = strToNum(heroele.style.left);
 
-    ghostdiv.style.top = gtopnum + randomRange(1, 15) + "px";
+    ghostdiv.style.top = gtopnum + 10 + "px";
 
     if (gtopnum > BG_HEIGHT - (GHOST_HEIGHT + HERO_WIDTH)) {
       if (gleftnum < heroleftnum && heroleftnum < gleftnum + GHOST_WIDTH) {
@@ -30,7 +30,6 @@ addghost = () => {
         clearInterval(interval);
       }
     }
-
     if (gtopnum > BG_HEIGHT - GHOST_HEIGHT) {
       ghostdiv.remove();
       clearInterval(interval);
@@ -44,5 +43,4 @@ killed = (ghost) => {
     ghost.remove();
   }, 3000);
 };
-addghost();
-setInterval(addghost, 3500);
+
