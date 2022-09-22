@@ -24,7 +24,6 @@ addghost = () => {
   var text = scoreElement.innerText;
   let nums = text.split("/");
   nums[1] = total;
-  console.log(nums);
 
   scoreElement.innerHTML = score + "/" + total;
 
