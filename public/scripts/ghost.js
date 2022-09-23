@@ -37,20 +37,20 @@ addghost = () => {
     ghostdiv.style.top = gtopnum + 10 + "px";
 
     if (gtopnum > BG_HEIGHT - (GHOST_HEIGHT + HERO_WIDTH)) {
-      console.log("first condition");
+    
       if (gleftnum < heroleftnum && heroleftnum < gleftnum + GHOST_WIDTH) {
         score++;
         scoreElement.innerHTML = score + "/" + total;
         killed(ghostdiv);
         clearInterval(interval);
-       }// else {
-      //   //하트 회색으로 만들기 +  목숨 만들기.
-      //   if (heart < 5 && heart > -1) {
-      //     console.log(heartEle[heart]);
-      //     heartEle[heart].src = "./images/heart-gray.png";
-      //     heart--;
-      //   }
-      // }
+       } else if(gtopnum > BG_HEIGHT - GHOST_HEIGHT) {
+        //하트 회색으로 만들기 +  목숨 만들기.
+        if (heart < 5 && heart > -1) {
+          console.log(heartEle[heart]);
+          heartEle[heart].src = "./images/heart-gray.png";
+          heart--;
+        }
+      }
     }
     if (gtopnum > BG_HEIGHT - GHOST_HEIGHT) {
       ghostdiv.remove();
