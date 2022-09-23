@@ -48,7 +48,7 @@ addghost = () => {
         if (heart < 5 && heart > -1) {
           console.log(heartEle[heart]);
           heartEle[heart].src = "./images/heart-gray.png";
-          heart--;
+          heart--;     
         }
       }
     }
@@ -65,3 +65,4 @@ killed = (ghost) => {
     ghost.remove();
   }, 3000);
 };
+
