@@ -1,5 +1,6 @@
 var score = 0;
 var total = 0;
+var heart = 4;
 randomRange = (min, max) => {
   return Math.floor(Math.random() * (max + 1 - min)) + min;
 };
@@ -8,6 +9,7 @@ addghost = () => {
   const ghostdiv = document.createElement("div");
   const bgelement = document.getElementById("bg");
   const heroele = document.getElementById("hero");
+  const heartEle = document.getElementsByClassName("heart");
   let randomnum = randomRange(0, BG_WIDTH - GHOST_WIDTH);
   ghostdiv.style.position = "absolute";
   ghostdiv.style.top = "0";
@@ -19,7 +21,7 @@ addghost = () => {
 
   bgelement.appendChild(ghostdiv);
 
-  //토달 수 계속 더해주기
+  //토탈 수 계속 더해주기
   total++;
   var text = scoreElement.innerText;
   let nums = text.split("/");
@@ -35,12 +37,20 @@ addghost = () => {
     ghostdiv.style.top = gtopnum + 10 + "px";
 
     if (gtopnum > BG_HEIGHT - (GHOST_HEIGHT + HERO_WIDTH)) {
+      console.log("first condition");
       if (gleftnum < heroleftnum && heroleftnum < gleftnum + GHOST_WIDTH) {
         score++;
         scoreElement.innerHTML = score + "/" + total;
         killed(ghostdiv);
         clearInterval(interval);
-      }
+       }// else {
+      //   //하트 회색으로 만들기 +  목숨 만들기.
+      //   if (heart < 5 && heart > -1) {
+      //     console.log(heartEle[heart]);
+      //     heartEle[heart].src = "./images/heart-gray.png";
+      //     heart--;
+      //   }
+      // }
     }
     if (gtopnum > BG_HEIGHT - GHOST_HEIGHT) {
       ghostdiv.remove();

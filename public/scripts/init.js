@@ -20,7 +20,7 @@ function start() {
     timeElement.classList.add("vibration");
   }
   if(time==4){
-    clearInterval(ghostrain)
+    clearInterval(ghostrain);
   }
   if(time==0){
     clearInterval(timer); 
