@@ -6,7 +6,7 @@ function start() {
   console.log("btn");
   console.log(heart);
   addghost();
-  let ghostrain = setInterval(addghost, 2000);
+  let ghostrain = setInterval(addghost, 1500);
   var timer = setInterval(function () {
     let str = timeElement.textContent;
     var time = str.split("s");
