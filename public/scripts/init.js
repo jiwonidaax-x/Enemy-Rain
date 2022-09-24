@@ -15,6 +15,8 @@ function start() {
     timeElement.textContent = time + "s";
     console.log(heart);
     if (heart == -1) {
+      clearInterval(timer);
+      clearInterval(ghostrain);
       gameover();
     }
     if (time == 10) {
