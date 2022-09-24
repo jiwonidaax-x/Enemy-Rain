@@ -135,10 +135,10 @@ background-position: 0px 0px;
 .score {
   display: inline;
   background-color: #8e7964;
-  font-size: 70px;
-  margin-left: 9px;
+  font-size: 60px;
+  margin-left: 20px;
   color: white;
- 
+
 }
 
 @keyframes vibration {

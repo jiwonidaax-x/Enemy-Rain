@@ -15,10 +15,6 @@ function start() {
     timeElement.textContent = time + "s";
     console.log(heart);
     if (heart == -1) {
-      console.log("incondition");
-      clearInterval(timer);
-      clearInterval(ghostrain);
-      console.log("totalscore");
       gameover();
     }
     if (time == 10) {
@@ -41,16 +37,12 @@ startbtn.addEventListener("click", start);
 const background=document.getElementById('bg');
 
 function totalscore(){
-  if(!confirm("======END====== \n TOTAL SCORE: \n 다시 하시겠습니까?"))
+  if(!confirm(`======END====== \n\n TOTAL SCORE: ${score*100}\n 다시 하시겠습니까?`))
   {
     var link = '/';
      location.href=link;
     location.replace(link);
-    //window.open(link);
-
-  //if no
   }else{
-  //if yes
   var link = '/game';
    location.href=link;
   location.replace(link);
@@ -58,16 +50,11 @@ function totalscore(){
 
 }
 function gameover(){
-  //black background--transparency 넣기
-  // replay
  if(! confirm("GAME OVER! \n 다시 하시겠습니까?")){
   var link = '/';
    location.href=link;
   location.replace(link);
-  //window.open(link);
-   //if no
  }else{
-  //if yes
   var link = '/game';
    location.href=link;
   location.replace(link);
