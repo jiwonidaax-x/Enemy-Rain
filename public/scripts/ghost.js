@@ -38,7 +38,7 @@ addghost = () => {
 
     if (gtopnum > BG_HEIGHT - (GHOST_HEIGHT + HERO_WIDTH)) {
     
-      if (gleftnum-GHOST_WIDTH< heroleftnum && heroleftnum < gleftnum + GHOST_WIDTH) {
+      if (gleftnum-GHOST_WIDTH < heroleftnum && heroleftnum < gleftnum + GHOST_WIDTH) {
         score++;
         scoreElement.innerHTML = score + "/" + total;
         killed(ghostdiv);
