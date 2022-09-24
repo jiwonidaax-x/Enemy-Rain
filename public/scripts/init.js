@@ -14,11 +14,12 @@ function start() {
     time = time[0] - 1;
     timeElement.textContent = time + "s";
     console.log(heart);
-    if (heart == 0) {
+    if (heart == -1) {
       console.log("incondition");
       clearInterval(timer);
       clearInterval(ghostrain);
-     //gameover func
+      console.log("totalscore");
+      gameover();
     }
     if (time == 10) {
       console.log("color");
@@ -28,11 +29,47 @@ function start() {
     if (time == 4) {
       clearInterval(ghostrain);
     }
-    if (time == 0) {
+    if (time == -1) {
       clearInterval(timer);
-      //score sum func
+      totalscore();
     }
   }, 1000);
 }
 
 startbtn.addEventListener("click", start);
+
+const background=document.getElementById('bg');
+
+function totalscore(){
+  if(!confirm("======END====== \n TOTAL SCORE: \n 다시 하시겠습니까?"))
+  {
+    var link = '/';
+     location.href=link;
+    location.replace(link);
+    //window.open(link);
+
+  //if no
+  }else{
+  //if yes
+  var link = '/game';
+   location.href=link;
+  location.replace(link);
+  }
+
+}
+function gameover(){
+  //black background--transparency 넣기
+  // replay
+ if(! confirm("GAME OVER! \n 다시 하시겠습니까?")){
+  var link = '/';
+   location.href=link;
+  location.replace(link);
+  //window.open(link);
+   //if no
+ }else{
+  //if yes
+  var link = '/game';
+   location.href=link;
+  location.replace(link);
+ }
+}
