@@ -3,10 +3,9 @@ const timeElement = document.getElementsByClassName("time")[0];
 const scoreElement = document.getElementsByClassName("score")[0];
 
 function start() {
-// var audio=document.getElementById("audio");
-// audio.play();
+
   addghost();
-  let ghostrain = setInterval(addghost, 1700);
+  let ghostrain = setInterval(addghost, 1200);
   var timer = setInterval(function () {
     let str = timeElement.textContent;
     var time = str.split("s");
