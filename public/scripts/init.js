@@ -5,7 +5,7 @@ const scoreElement = document.getElementsByClassName("score")[0];
 function start() {
 
   addghost();
-  let ghostrain = setInterval(addghost, 1200);
+  let ghostrain = setInterval(addghost, 1400);
   var timer = setInterval(function () {
     let str = timeElement.textContent;
     var time = str.split("s");
