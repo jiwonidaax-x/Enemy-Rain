@@ -1,9 +1,11 @@
 const startbtn = document.getElementById("start");
 const timeElement = document.getElementsByClassName("time")[0];
 const scoreElement = document.getElementsByClassName("score")[0];
+const background = document.getElementById("bg");
+
+startbtn.addEventListener("click", start);
 
 function start() {
-
   addghost();
   let ghostrain = setInterval(addghost, 1400);
   var timer = setInterval(function () {
@@ -33,31 +35,30 @@ function start() {
   }, 1000);
 }
 
-startbtn.addEventListener("click", start);
-
-const background=document.getElementById('bg');
-
-function totalscore(){
-  if(!confirm(`======END====== \n\n TOTAL SCORE: ${score*100}\n 다시 하시겠습니까?`))
-  {
-    var link = '/';
-     location.href=link;
+function totalscore() {
+  if (
+    !confirm(
+      `======END====== \n\n TOTAL SCORE: ${score * 100}\n 다시 하시겠습니까?`
+    )
+  ) {
+    var link = "/";
+    location.href = link;
     location.replace(link);
-  }else{
-  var link = '/game';
-   location.href=link;
-  location.replace(link);
+  } else {
+    var link = "/game";
+    location.href = link;
+    location.replace(link);
   }
-
 }
-function gameover(){
- if(! confirm("GAME OVER! \n 다시 하시겠습니까?")){
-  var link = '/';
-   location.href=link;
-  location.replace(link);
- }else{
-  var link = '/game';
-   location.href=link;
-  location.replace(link);
- }
+
+function gameover() {
+  if (!confirm("GAME OVER! \n 다시 하시겠습니까?")) {
+    var link = "/";
+    location.href = link;
+    location.replace(link);
+  } else {
+    var link = "/game";
+    location.href = link;
+    location.replace(link);
+  }
 }
