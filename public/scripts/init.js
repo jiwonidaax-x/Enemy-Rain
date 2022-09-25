@@ -3,8 +3,8 @@ const timeElement = document.getElementsByClassName("time")[0];
 const scoreElement = document.getElementsByClassName("score")[0];
 
 function start() {
-  console.log("btn");
-  console.log(heart);
+// var audio=document.getElementById("audio");
+// audio.play();
   addghost();
   let ghostrain = setInterval(addghost, 1700);
   var timer = setInterval(function () {
