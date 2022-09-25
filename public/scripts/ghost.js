@@ -44,7 +44,7 @@ addghost = () => {
         killed(ghostdiv);
         clearInterval(interval);
        } else if(gtopnum > BG_HEIGHT - GHOST_HEIGHT) {
-        //하트 회색으로 만들기 +  목숨 만들기.
+  
         if (heart < 5 && heart > -1) {
           console.log(heartEle[heart]);
           heartEle[heart].src = "./images/heart-gray.png";
