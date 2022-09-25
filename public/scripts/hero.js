@@ -17,10 +17,10 @@ document.addEventListener("keydown", function (e) {
   if (e.keyCode === 37 && leftval > 0) {
     heroElement.className = "left";
     //
-    heroElement.style.left = leftval - 10 + "px";
+    heroElement.style.left = leftval - 14 + "px";
   } else if (e.keyCode === 39 && leftval < 765) {
     heroElement.className = "right";
-    heroElement.style.left = leftval + 10 + "px";
+    heroElement.style.left = leftval + 14 + "px";
   }
 });
 
